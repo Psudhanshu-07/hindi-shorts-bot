@@ -6,6 +6,10 @@ import os
 
 app = Flask(__name__)
 
+@app.route('/')
+def home():
+    return '✅ Hindi Shorts Bot is Live!'
+
 @app.route('/generate', methods=['POST'])
 def generate_video():
     data = request.json
