@@ -5,6 +5,12 @@ from moviepy.editor import TextClip, CompositeVideoClip, AudioFileClip
 import os
 
 app = Flask(__name__)
+app = Flask(__name__)
+
+@app.route('/', methods=['GET'])
+def home():
+    return "✅ Hindi Shorts Bot is Live! Use POST /generate to submit your topic."
+
 
 @app.route('/')
 def home():
