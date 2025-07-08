@@ -5,7 +5,8 @@ import os
 import random
 import string
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static')
+
 
 @app.route('/', methods=['GET'])
 def home():
