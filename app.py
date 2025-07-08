@@ -11,11 +11,6 @@ app = Flask(__name__)
 def home():
     return "✅ Hindi Shorts Bot is Live! Use POST /generate to submit your topic."
 
-
-@app.route('/')
-def home():
-    return '✅ Hindi Shorts Bot is Live!'
-
 @app.route('/generate', methods=['POST'])
 def generate_video():
     data = request.json
